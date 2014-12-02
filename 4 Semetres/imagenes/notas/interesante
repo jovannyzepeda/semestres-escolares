@@ -1,0 +1,7 @@
+i2= imrezise(I1,[m,n]);
+este comando permite escalar las imagenes 
+
+
+
+I2=imrotate(I,angulo);
+permite rotar la imagen original a una cierta cantidad de grados en el mapa 

@@ -1,0 +1,125 @@
+ 
+modernizer
+<script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+
+
+modernizer soporde de bordes redondos
+<script type="text/javascript">
+        if (!Modernizr.borderradius) {
+            $.getScript("js/jquery.corner.js", function () {
+                $("form").corner();
+            });
+        }
+</script>
+
+anchura de bordes
+border-top-width: 10px; 
+border-right-width: 1em; 
+border-bottom-width: thick; 
+border-left-width: thin;
+
+color de borde
+border-top-color: #CC0000; 
+border-right-color: blue; 
+border-bottom-color: #00FF00; 
+border-left-color: #CCC;
+
+estilo de borde 
+border-top-style: dashed; 
+border-right-style: double; 
+border-bottom-style: dotted; 
+border-left-style: solid;
+
+borde redondo 
+border-radius: 2em 1em 4em / 0.5em 3em;
+
+o bien se puede poner 
+border-top-left-radius:	  2em 0.5em;
+border-top-right-radius:	 1em 3em;
+border-bottom-right-radius: 4em 0.5em;
+border-bottom-left-radius:  1em 3em;
+
+Valores para las sombras
+Desplazamiento horizontal
+Desplazamiento vertical
+Difuminado
+Rango de propagación
+Color
+Adentro o afuera
+box-shadow: 1px 1px 30px 4px rgba(0,0,0,0.4);
+
+transparencia
+img
+{
+	opacity:0.4;
+	filter:alpha(opacity=40); /* Para IE8 y menores */
+}
+
+saltos de lines <br>
+
+modificar texto 
+
+#especial {
+  font-weight: normal;
+  font-style: italic;
+  background-color:#FFFF66;
+  padding: 2px;
+}
+
+enlaces 
+<a href="http://www.loquesea.com">
+Texto del enlace
+</a>
+<a href="http://www.google.com" target="_blank">
+Google en otra ventana
+</a>
+
+link interno 
+<a href="#nombre_ancla">
+Texto del enlace
+</a>
+
+
+
+correo
+<a href="mailto:correo@servidor.com">
+Contacto
+</a>
+
+
+
+listas numeradas
+
+<ol>
+  <li>Esto es el numero 1.</li>
+  <li>Este sería el 2</li>
+  <li>Y por último el 3</li>
+</ol>
+
+listas desnumeradas
+
+<ul>
+  <li>Esto es un punto.</li>
+  <li>Este es otro.</li>
+  <li>Y este es otro diferente.</li>
+</ul>
+
+ejemplos de tipos de lista 
+ul#cuadros {
+	list-style-type: square;
+}
+
+ul#numerada {
+	list-style-type: decimal;
+}
+
+ul#sin{
+	list-style-type: none;
+}
+
+lista o vinetas con imagen 
+ul.ok { 
+	list-style-image: url("img/ok.png"); 
+}
+

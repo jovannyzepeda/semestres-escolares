@@ -1,0 +1,42 @@
+dhcp automatico o bien direcciones estaticas  lo necesario para configurar la red estatica es ip y mascara de red el gateway es opcional al igual que los DNS
+ifconfig
+ifconfig -a
+ifconfig <nombre de la interfaz> up
+
+**agregar direccion ip**
+ifconfig eth0 192.136.13.33(direccion (ip) netmask 255.255.255.0
+cd /etc/network
+nano /etc/network/interfaces posicionarnos en archivo interfaces
+
+configuracion a la rapida 
+
+address 192.168.1.128
+netmask 255.255.255.0
+ifdown eth0
+
+ifup eth0
+
+
+red 172.22.200.21
+
+para detener comandos ctrl + c
+
+a es para empezar a editar y esc para salir a comando 
+
+
+condfigurar lugar de donde se consiguen paquetes 
+vi /etc/apt/sources.list
+
+y poner deb http://ftp.mx.debian.org/debian whezy main contrib non-free
+
+en casa se debe de trabajar con nat y direcciones automaticas 
+ifconfig dhclient
+
+instalar openssh-client
+
+auto eth0
+iface eth0 inet static
+addres tu direccion
+netmas 255.255.255
+
+

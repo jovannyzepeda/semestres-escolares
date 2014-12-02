@@ -1,0 +1,21 @@
+$('div:first').children().clone(),appendTo($('div:last'));
+
+///muestra los datos internos de un div
+var elementos = $ ('div:first').children().size();
+for(i=0;i<elementos;i++){
+console.log($('div:first').children().eq(i));
+}
+
+
+
+
+for each
+var arr=$('div:first').children()
+for(i in arr){
+console.log(arr[i]+);
+}
+
+
+arr.each(function(){
+console.log($(this));
+})

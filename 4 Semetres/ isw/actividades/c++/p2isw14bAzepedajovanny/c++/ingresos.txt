@@ -1,0 +1,12 @@
+Enero  :  10000
+Febrero  :  10000
+Marzo  :  0
+Abril  :  0
+mayo  :  0
+Junio  :  0
+Julio  :  0
+Agosto  :  0
+Septiembre  :  0
+Octubre  :  0
+Noviembre  :  0
+Diciembre  :  0

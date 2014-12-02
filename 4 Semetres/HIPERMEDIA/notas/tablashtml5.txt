@@ -1,0 +1,208 @@
+**********************Tablas horizontales y verticales************************************************************
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table, th, td
+{
+border-collapse:collapse;
+border:1px solid black;
+}
+th, td
+{
+padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Horizontal Headings:</h3>
+
+<table>
+<tr>
+  <th>Name</th>
+  <th>Telephone</th>
+  <th>Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h3>Vertical Headings:</h3>
+
+<table>
+<tr>
+  <th>Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th>Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <th>Telephone:</th>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+</body>
+</html>
+******************************Tablas.Desplegar elementos dentro de otros elementos******************************
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table, th, td
+{
+border-collapse:collapse;
+border:1px solid black;
+}
+th, td
+{
+padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<table>
+<tr>
+  <td>
+   <p>This is a paragraph</p>
+   <p>This is another paragraph</p>
+  </td>
+  <td>This cell contains a table:
+   <table>
+   <tr>
+     <td>A</td>
+     <td>B</td>
+   </tr>
+   <tr>
+     <td>C</td>
+     <td>D</td>
+   </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+  <td>This cell contains a list
+   <ul>
+    <li>apples</li>
+    <li>bananas</li>
+    <li>pineapples</li>
+   </ul>
+  </td>
+  <td>HELLO</td>
+</tr>
+</table>
+
+</body>
+</html>
+***************************************Tablas con subtitulos****************************************************
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table, th, td
+{
+border-collapse:collapse;
+border:1px solid black;
+}
+th, td
+{
+padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<table>
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+</body>
+</html>
+***********************************************Tablas con span*************************************************
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table, th, td
+{
+border-collapse:collapse;
+border:1px solid black;
+}
+th, td
+{
+padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Cell that spans two columns:</h3>
+<table>
+<tr>
+  <th>Name</th>
+  <th colspan="2">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+
+<h3>Cell that spans two rows:</h3>
+<table>
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+</body>
+</html>
+**********************************Listas descriptivas***********************************************************
+<dl> define la descripcion de la lista cierra con </dt>
+ejemplo:
+<dl>
+<dt> cofee</dt>
+<dd>-Black hot drink </dd>
+</dl> NOTA: TAMBIEN SE PUEDEN ANEXAR IMAGENES, LINKS 
+
+
+
+
+

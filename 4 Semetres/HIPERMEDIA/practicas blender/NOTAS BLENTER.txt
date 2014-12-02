@@ -1,0 +1,36 @@
+CONTROL +T     entra a trackt to constraint   seguimiento de objetos ejemplo camara a objeto
+click derecho , tab , elegir una cara , e  , 0  clic fuera y f es para redimensionar una cara de un objeto ejemplo del cubo rubik 
+end fram son los fotrogramas totales de la animacion
+abajo viene 24fts son  fotogramas por segundo 
+
+para empezar a agregar fotogramas nos posicionamos sobre el desado que marca la linea del tiempo 
+precionamos i y se abre un menu para insertar fotogramas 
+ejemplo i - loc rot  fotograma clave
+mover hasta el fotograma 24 q es el segundo y mover la camara
+o hasta el q se desee finalmente despuesde agregar varios fotogramas se puede ver la visualizacion con 0 y mover la linea del tiempo , finalmente renderizar video y esperar el tiempo necesario
+
+
+cambiar texturas
+
+multiplicar los poligonos mejora la calidad de la imagen seleccionar imagen click en llave y agregar division, subir el numero 
+
+para emparetar la vista del la camara con la imagen de blender selecciona la camara ir a view y despues camera, set active object as camera
+
+el color spectacular es el de fondo
+
+mover objetos a otro escenario precionar m 
+los escenarios son como capaz y permite que el archivo no se alente tanto 
+en donde die object mode se puede cambiar las cosas para que se pueda alterar de forma bonita xp
+
+se pueden agregar varias imagenes al momento de animar i rotacion i movimineto , etc 
+
+se puede renderizar enimagenes ir a opcion de editar vdeo importar imagenes y gurdarlos como imagen de esa forma si se para o algo por el esteilo se puede seguir desde ese lugar xp
+
+la opcion transparencia permite importar otro video al mismo para que seas mucho mas facil hacer la realizad aumentada
+
+hay software llamado leo q es como lego y permite modelar las figuras que querramos 
+
+blender snap existe para descargar cosas ya hechas 
+
+
+v    abre el pincel 

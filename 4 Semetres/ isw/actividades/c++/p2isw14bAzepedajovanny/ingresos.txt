@@ -1,0 +1,12 @@
+Enero  :  2000
+Febrero  :  0
+Marzo  :  0
+Abril  :  0
+mayo  :  50000
+Junio  :  0
+Julio  :  0
+Agosto  :  0
+Septiembre  :  0
+Octubre  :  0
+Noviembre  :  0
+Diciembre  :  0

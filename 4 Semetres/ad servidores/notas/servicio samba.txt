@@ -1,0 +1,15 @@
+servidor samba es la implementacion del protocolo SMB 
+------------------------netbios()-----------------
+samba es como una red compartida de windows xp(samba solo sirve para una red local )  apt-get -d install samba descarga mas no instala
+
+paquete a instalar seria samba 
+
+para listar recursos anonimos es decir se muestran sin ingresar al sistema
+
+
+lista de recursos que abra 
+sera peanut con unico usuario de acceso peanut contrasena grape con las mismas propiedades q la anterior eliminar agregar descargar(archivo abc borrable)
+la otra carpeta grape con pass peanut dentro el archivo con codigo  (acceso a eliminar agregar descargar etc)
+(recomendacion crearla en /home/samba/usuarios)
+
+

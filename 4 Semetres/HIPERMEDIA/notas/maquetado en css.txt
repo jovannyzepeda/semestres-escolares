@@ -1,0 +1,50 @@
+**************************Maquetar en css*****************************************************************
+CHECAR APUNTE N EL CUADERNO
+/* Definimos los tamaños de las cajas */
+#logo{
+	width: 100%;
+	height: 30%;
+	margin-bottom: 0.2%;
+}
+
+#menu-izquierdo{
+	width: 20%;
+}
+
+#contenido{
+	/* Al ancho le restamos los margenes para que sea 65% el total */
+	width: 64.4%;
+	margin: 0 0.2% 0 0.4%;
+}
+
+#menu-derecho{
+	width: 15%;
+}
+NOTA:Si no se tiene soporte para box-sizing, considerar cambiar el tamaño de las cajas para incluir padding y bordes.
+
+********/* Acomodamos las cajas en un solo renglón */******
+#menu-izquierdo, #contenido, #menu-derecho{
+	float: left;
+
+********************<base> Cambia la dirección base de las direcciones y la carga de archivos. Se puede especificar el lugar de apertura para las URL con el atributo target y los valores _blank, _self, _parent y _top*************************
+
+<meta> Funciona para otorgar información de los datos del documento. Debe tener el atributo name para indicar el nombre del metadato y los otros valores a otorgar son charset, content y http-equiv.
+
+<script> Permite introducir scripts para su uso dentro del documento. Lleva el atributo type donde se indica el tipo de script.
+
+Favicon
+Es la imagen que se utiliza en el navegador para identificar al sitio.
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<link href="favicon.png" rel="icon" type="image/png" />
+ef="http://www.example.com/alte
+
+<noscript> Mostrará el contenido dentro de estas etiquetas en caso de que el navegador no soporte los scripts.
+
+Citas
+Los blockquotes sirven para mostrar un bloque que indica que lo que hay en el interior es una cita.
+Las citas sirven para indicar el titulo de un trabajo, ya sea un libro, un paper, canción, etc.
+<cite>El Señor de los Anillos</cite>
+<blockquote>
+<p>Renovada será la hoja que se ha roto.</p>
+</blockquote>
+}

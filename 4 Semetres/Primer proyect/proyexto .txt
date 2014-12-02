@@ -1,0 +1,28 @@
+programas que hacen el marco abierto de lectura 
+ORF Finder (Open Reading Frame Finder)
+-
+NCBI
+ORF Finder busca marcos abiertos d
+e lectura (ORF) en la secuencia de ADN que
+Ud. introduzca. El programa devuelve el rango de cada ORF, junto con la
+traducción de la proteína correspondiente. ORF Finder soporta el alfabeto IUPAC
+y varios códigos genéticos. Utilice ORF Finder para buscar po
+sibles segmentos de
+codificación de proteínas en nuevas secuencias de ADN
+
+gENSCAN
+GENSCAN fue desarrollado por Chris Burge en el grupo de investigación de
+Sa
+muel Karlin, Departamento de Matemáticas de la Universidad de Stanford. El
+programa y el modelo que subyace en ella se describen en: Burge, C. y Karlin, S.
+(1997) Predicción de la estructura de los genes completos en ADN genómico
+humano. J. Mol. Biol. 268,
+78
+-
+94. 
+
+
+
+
+
+http://www.marcoregalia.com/STUFF/UDISTRITAL/Bioinformatica/Actividades/Libro%20Clases/Libro%20Bioinformatica.pdf 

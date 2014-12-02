@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  	<p>Ingresa 3 numeros xp</p><br>
+  	<label> numero 1</label><br>
+  	<input type ="number" id="uno"/><br>
+  	<label> numero 2</label><br>
+  	<input type ="number" id="dos"/><br>
+  	<label> numero 3</label><br>
+  	<input tipe ="number" id="tres"/><br>
+  	<button type="button" onclick="mostrar()">Dame click xp</button>
+  	<script type="text/javascript">
+  			function mostrar(){
+  				var a =(document.getElementById('uno'));
+  				a = parseFloat(a.value);
+  				var b=(document.getElementById('dos'));
+  				b = parseFloat(b.value);
+  				var c= (document.getElementById('tres'));
+  					c = parseFloat(c.value);
+  				var mayor=a;
+  				if(mayor<b){
+  						mayor = b;
+  				}
+  				if(mayor<c){
+  					mayor = c;
+  				}
+  				console.log(mayor);
+
+
+  			}
+
+
+  	</script>
+  </body>
+</html>

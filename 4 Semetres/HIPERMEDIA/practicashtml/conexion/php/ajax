@@ -1,0 +1,19 @@
+    <script type="text/javascript">
+    function operacion(precio,nombre,id){
+      var cantidad=$("input#carro").val();
+      var total = cantidad*precio;
+      var info = 'id='+id+'&nombre='+nombre+'&precio='+precio+'&cantidad='+cantidad+'&total='+total;
+                    $.ajax({
+        url: 'agregar.php',
+        type: 'POST',
+        data: info,
+        beforeSend : function(){
+          console.log('enviando datos');
+        },
+        success: function(){
+          console.log('enviado');
+          console.log(info);
+        }
+      });
+    }
+    </script>

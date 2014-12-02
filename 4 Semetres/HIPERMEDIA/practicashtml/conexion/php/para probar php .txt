@@ -1,0 +1,1 @@
+en terinal ve a la carpeta donde se encuentra y pon php nombre de archivo.php

@@ -1,0 +1,2 @@
+selec sum(campo donde estan los datos a sumar)from tabla padre where variable >,<,=, etc.
+si se desea multiplicar lugares seria select sum(campo * campo el resto igual)

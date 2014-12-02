@@ -1,0 +1,32 @@
+practica MYSQL 
+
+se llamara mysql-server
+permitira acceso remoto
+todos usuarios virtuales (tabla usuarios)
+
+usuarios seran peanut contrasena grape
+grape contrasena peanut
+durante la instalacion pregunta contrasena de usuario root (root mysql que es distinto del original(configura la password de root))
+(root solo se usa para crear usuarios tablas o cosas similares (se crean usuarios con permisos para acceder a la base de datos))
+una base de datos se llamara 
+maxwell donde tendran acceso los dos usuarios(grape tiene permisos de todos, peanut solo se puede permitir select)
+
+base de datos grape donde solo tendra acceso grape tendra todos los permisos de todo 
+
+base de datos peanut donde solo tiene acceso peanut  peanut tiene permisos de todos
+
+mysqlcruel1293
+
+
+
+(no usar phpmyadmin)
+
+
+
+para postgres 
+
+
+instalar postgres -9.1 
+usuario administrador postgres
+
+2 usuarios 3 usuarios de bases de datos (lo mismo que el anterior)

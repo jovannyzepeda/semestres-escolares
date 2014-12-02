@@ -1,0 +1,26 @@
+o falso color
+se aplica para cuando los valores del rango no estan dentro de la escala del  0 al 255
+
+para realizarlo es necesario saber nuestro rango 
+
+RANGO --- rmin   rmax
+
+
+basado en la resolucion de la imagen 
+
+inc
+
+
+para efectuarlo en la funcion se va partiendo el tama;o total de la imagen por el inc (0 a 255)
+
+despues se debe de asignar los valores para cada seccion del pixel en si 
+
+ejemplo de esto es si el valor minimo es igual a 255 azul y conforme se va avanzando ir mezclando los colores 
+
+las formas de hacerlo son con mapas definidos de colores o paleta(FUNCION)
+
+ imtool tiene algo llamado chose colormap y tambien muestra histograma(al final que permite cambiar los colores )(histograma adjust contrast)
+imagen de falso color sin la barra de costado no esta bien  (en imtool aparece en una miniimagend e variso colores)
+
+
+colormapeditor(sirve para crear tu propio mapa de colores)

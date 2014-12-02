@@ -1,0 +1,7 @@
+openvpn es el paquete que se utiliza para realizar la conexion vpn
+
+a una maquina virtual se agrega otro adaptador virtual que seria el eth1
+
+entre el las maquinas virtuales estarian en red interna y entre una la virtual y la real seria en puente 
+dentro de la red entre gaby y yo se pone una red y entre las mias una distinta, al final se debe de poder realizar un ping entre la maquina virtual 2 a la de gaby 
+maquina virtual 2

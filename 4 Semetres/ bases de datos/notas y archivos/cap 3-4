@@ -1,0 +1,19 @@
+entidad-relacion
+permiten crear el esquema fisico de la bda
+las entidades se presentan con un cuadro o rectangulo
+uno a muchos es lo mismo que padre a hijo
+las relaciones redundantes se presentan cuando dos o mas relaciones se usan 
+para representar los mismo conceptos
+la forma para resolver entidades muchos a muchos es hacer uno a muchos con una tercera entidad
+llaves primarias son unicas y sirven para identificar alfun dato en momento de 
+busqueda, por otro lado las llaves foraneas sirven para crear una relacion entre 
+entidades ejemplo de una relacion uno a muchos el que tenga la relacion muchos 
+debe de tener la llave foranea
+
+especificacion de atributos capitulo 4
+
+los atributos a usar no pueden usar sinonimos ya que crean confusion
+ una llave primaria debe de estar en otra tabla de referencia y debe de tener el mismo 
+nombre que la llave primaria
+el numero mas largo de letras recomendado para un nombre de bases de datos es de 
+10 caracteres.

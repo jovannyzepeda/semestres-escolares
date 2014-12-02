@@ -1,0 +1,71 @@
+ resolucion de nombres es la transcripcion de direcciones ip a nombres simples 
+
+del lado cliente se recibe un uint32_t   que significa entero de 32 bits sin signo 
+la forma de ingresar una direccion char a un entero 32 es 
+tomar las secciones por bits ejemplo 148.202.152.110 seria 
+148/202/152/110
+e ingresado seria
+(148<<24)|(202<<16)|(152<<8)|110
+y esta seria la direccion ip
+
+
+
+uint32_t host 2:
+char *tiger ="tiger.corb.mx"
+tld --> dominos de alto nivel  .com   .org   . net   -->> cualquier pais puede tener los dominios
+gtld -> dominios a nivel geografico    --->> .mx    .es   .ch
+
+los nombres dns se leen de derecha a izquierda es decir mx  corb y tiger     
+ root servers se les puede preguntar con el nombre    .  a ellos se le pueden preguntar quien es el que resuelve los mx
+
+de hay se dirige a nic mexico que gestiona dominios de mexicos que son los servidores raiz de mexico 
+
+ns-x.nix.mx
+ns-e.nic.mx
+ns-m.nic.mx
+ns-o.nic.mx
+ns-i.nic.mx
+ns-c.nic.mx
+aqui se pregunta quien resuelve corb.mx
+
+dnsl.he.net
+
+y a el se le realiza la consulta completa de tiger.com.mx que te otorga la direccion completa de la pagina
+
+***practica
+
+el labor para la practica es elegir un nombre de dominio inexistente de alto nivel .org . net etc
+
+ejemplo servidores.com.mx
+crear y configurar dns de esa zona 
+-- nombreinventadoservidor .com.mx  tipo A  apuntando hacia 1.1.1.1   listo  
+www.nombre.com.mx  tipo CNAM  apuntando hacia nombre.com.mx
+  registro    tipo ns apunta hacia ns1.nombre.com.mx   listo 
+ns1.nombre tipo A apunta hacia mi ip 172.22.200.21  listo
+
+registros MX deben apuntar hacia hypatia.udg.mx con prioridad 6 listo
+
+debe existir un registro txt con el nombre codigo.nombre.com.mx  el que tendr que tener como dato los apellidos
+realizar el registro de la soa   listo
+
+*fin practica
+
+general electric te permite 50 dominios gratuitos y libres de restricciones
+
+
+paquete dns es el bind9
+
+y dnsutils ->> dig
+
+
+para instalar bind9 
+
+/etc/bind
+
+
+
+para apuntarnos a nosotros mismo es 127.0.0.1
+poner direccion 172.22.200.6
+
+consulta dns dig direccion nombre
+

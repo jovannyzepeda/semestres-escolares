@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="fonts/glyphicons-halflings-regular.woff" rel="wpff">
+    <link href="fonts/glyphicons-halflings-regular.ttf" rel="ttf">
+  </head>
+  <body>
+  <button type="button" onclick="nuevo()" name="Telefono"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-phone"></span></button>
+  	<select class="label label-info" id="opciones">
+  		<option value="0">Seleccina un tipo de telefono</option>
+  		<option value="1">Telefono Casa</option>
+  		<option value="2">Telefono Celular</option>
+  		<option value="3">Telefono Oficina</option>
+  	</select>
+  	<br><br>
+    <div class="tel" id="tel">
+  	</div>
+  	<div class="cel" id="cel">  	
+  	</div>
+  	<div class="ofi" id="ofi">
+  	</div>
+  	<script type="text/javascript">
+  	var i=1,j=1,k=1;
+  	function nuevo(){
+  		var label =document.createElement("label");
+  		var espacio=document.createElement("br");
+  		var boton=document.createElement("button");
+  		var texbuton = document.createElement("span");
+  		var input=document.createElement("input");
+  		var div = document.createElement('div');
+  		texbuton.setAttribute('class','glyphicon glyphicon-ban-circle');
+  		boton.appendChild(texbuton);
+  		boton.setAttribute('class','btn btn-danger');
+  		boton.setAttribute('type','button');
+  		boton.setAttribute('onclick','borrar(this)');
+		var posicion=document.getElementById('opciones').options.selectedIndex; //posicion
+		var tipo=document.getElementById('opciones').options[posicion].value; 
+  		switch(tipo){
+  			case '1':
+  				input.placeholder="Telefono casa";
+  				var parrafo = document.createTextNode("Telefono "+i+" ");
+  				label.appendChild(parrafo);
+  				input.id=i;
+  				input.name='numero'+i;
+  				input.setAttribute('class',"alert alert-success");
+  				boton.setAttribute('id',i);
+  				label.setAttribute('for','numero'+i);
+  				label.setAttribute('class',"label label-info");
+  				div.setAttribute('id',i);
+  				div.appendChild(espacio);
+  				div.appendChild(label);
+  				div.appendChild(espacio);
+  				div.appendChild(input);
+  				div.appendChild(boton);
+  				var obj=document.getElementById('tel');
+  				obj.appendChild(div);
+  				i++;
+  			break;
+  			case '2':
+  				input.placeholder="Telefono celular";
+  				var parrafo = document.createTextNode("Celular "+j+" ");
+  				label.appendChild(parrafo);
+  				input.id=j;
+  				input.name='celular'+j;
+  				input.setAttribute('class',"alert alert-success");
+  				boton.setAttribute('id','cel'+j);
+  				label.setAttribute('for','Celular'+j);
+  				label.setAttribute('class',"label label-info");
+  				div.setAttribute('id','cel'+j);
+  				div.appendChild(espacio);
+  				div.appendChild(label);
+  				div.appendChild(espacio);
+  				div.appendChild(input);
+  				div.appendChild(boton);
+  				var obj=document.getElementById('cel');
+  				obj.appendChild(div);
+  				j++;
+  			break;
+  			case '3':
+  				input.placeholder="Telefono Oficina";
+  				var parrafo = document.createTextNode("Oficina "+k+" ");
+  				label.appendChild(parrafo);
+  				input.id=k;
+  				input.name='Oficina'+k;
+  				input.setAttribute('class',"alert alert-success");
+  				boton.setAttribute('id','oficina'+k);
+  				label.setAttribute('for','oficina'+k);
+  				label.setAttribute('class',"label label-info");
+  				div.setAttribute('id','oficina'+k);
+  		  		div.appendChild(espacio);
+  		  		div.appendChild(label);
+  		  		div.appendChild(espacio);
+  				div.appendChild(input);
+  				div.appendChild(boton);
+  				var obj=document.getElementById('ofi');
+  				obj.appendChild(div);
+  				k++;
+  			break;
+
+  	}
+  	}
+  	function borrar(obj){
+  	obj.parentNode.parentNode.removeChild(obj.parentNode);    
+  	}
+  	</script>
+  </body>
+</html> 

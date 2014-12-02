@@ -1,0 +1,41 @@
+button{
+	margin-left: 40%;
+	
+} 
+label{
+	margin-top: 10%;
+}
+input{
+background-color: #FFF8AB;
+}
+
+.cel{
+	width: 25%;
+	float: left;
+	margin-left: 5%;
+	border-left: 2%;
+}
+.ofi{
+width: 25%;
+margin-left: 5%;
+float: left;
+}
+.tel{
+	width: 25%;
+	float: left;
+	margin-left: 10%;
+}
+.out{
+	margin-left: 30%;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    font-size: 1.3em;
+}
+.btn{
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  border-radius: 1em;
+  
+}

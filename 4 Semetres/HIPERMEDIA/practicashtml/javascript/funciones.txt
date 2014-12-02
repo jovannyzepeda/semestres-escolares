@@ -1,0 +1,52 @@
+cadena.legth --- da el tama;o 
+
+cadma + mensaje --agrega datos
+
+mensaje.toUpperCase();   -- hace todo en mayusculas
+
+cadena.toLowerCase();  -- todo minusculas
+
+mensaje.chrartAt(2);    obtiene la letra en esa posicion
+
+var vocales=['','','',,''];
+arreglos
+
+
+cadena.split combierte en arreglo una cadena
+
+join("") concatena cadenas 
+
+concat(valores); concatena cadenas
+valores.push(4)  pone un valor en la pila
+temp = valores.shift()
+
+reverse invierte los valores de un arreglo .
+
+
+DOM
+
+donde cada etiqueta que se tiene es un nodo del arbol de la pagina 
+este puede ser manipulado por js o jquery
+
+para manejar el DOm se usa en js document.getlementsBYTagName()
+ByName
+ById  
+crear nodo elemt
+
+var parrafo = documentlcreatElemnt)("p");
+nodo text
+creatreTextNide("hola");
+nodo hijo paar agregarlo a la pagina que va al final d
+el body
+parrafo.appendChild(conteido);
+body.
+
+quitar elemento
+getElementById("temp");
+parrafo.parentNode.removeChild(parrafo);
+
+ea dear el boton eliminar
+tar
+font ozon botones bonitos
+
+

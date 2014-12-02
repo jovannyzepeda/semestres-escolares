@@ -1,0 +1,85 @@
+
+aside{
+	
+	width:20%;
+	height: 20%;
+	float:left;
+	background-color: #D5ACEB;
+	position: fixed;
+	margin-top: 6%;
+}
+form{
+	text-align: left;
+	color: white; 
+	margin-left: 5%;
+}
+textarea{
+	width: 40%;
+	color: purple;
+}
+.boton{
+	background-color: pink;
+	color: darkgreen;
+}
+.login{
+	margin-left: 30%;
+}
+div{
+	margin-top: 0%;
+}
+section{
+	margin-top: 6%;
+	width:78%;
+	float: right;
+	overflow: auto;
+	background-color: #F3E2A9;
+}
+
+.horario{text-align: center;}
+a{
+	color: withegray;
+	margin-left: 30%;
+}
+video{
+		width: 50%;
+		height: 50%;
+	}
+
+img{width: 18%; height: 5%;
+float: right;
+}
+
+.dos{
+background-color: #030452;
+
+
+}
+
+footer
+{
+	margin: 15px;
+	text-align: center;
+	color: #FBF2EF;
+	clear: both;
+
+}
+
+header{
+	height: 10%;
+	width:100%;
+	position: fixed;
+	text-align: center;
+	top: 0%;
+	color: #FBF2EF;
+	background-color: #030452;
+}
+
+table{
+	margin: auto;
+	text-align: left;
+	border: 2px solid green;
+}
+body{
+
+	background-color: #030452;
+}

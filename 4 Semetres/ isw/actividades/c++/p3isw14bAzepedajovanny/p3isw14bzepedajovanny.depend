@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1411670065 source:/home/zepeda/Documentos/escuela/ isw/actividades/c++/p3isw14bAzepedajovanny/main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<fstream>
+

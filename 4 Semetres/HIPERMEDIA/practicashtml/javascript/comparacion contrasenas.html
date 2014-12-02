@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  	<label>Contraseña</label><br>
+  	<input type="password" id="pas1" name="pas1" /><br>
+  	<label>confirmar contraseña</label><br>
+  	<input type="password" id="pas2"name="pas2" /><br>
+  	<button type="button" onclick="comprobar()">Enviar</button>
+  	<script type="text/javascript">
+  	function comprobar(){
+  	var uno=document.getElementById("pas1").value;
+  	var dos =document.getElementById("pas2").value;
+  	console.log(uno);
+  	if(uno==dos){
+  		alert('contraseña correcta');
+  	}
+  		else{
+  			alert('contraseña erronea');
+  		}
+  	}
+  	</script>
+  </body>
+</html>

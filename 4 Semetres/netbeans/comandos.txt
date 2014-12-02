@@ -1,0 +1,12 @@
+ 
+@Override
+    public Image getIconImage(){
+    Image refValue=Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("iconos/icono.png"));
+    
+    return refValue;
+    }
+
+//// crear un icono para elegir y cambiar el de inicio
+
+
+this.dispose  ==== cierra la pantalla principal de trabajo dejanod las otras abeirtas

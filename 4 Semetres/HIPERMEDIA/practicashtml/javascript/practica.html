@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link rel="stylesheet" type="text/css" href="estilo.css"
+  </head>
+  <body>
+  <section id="section">
+  	<button type="button" onclick="nuevo()" class="boton" id="0">+</button><br>
+  	<script type="text/javascript">
+  	var i=1;
+  	function nuevo(){
+  		var texto =document.createElement("label");
+  		var espacio=document.createElement("br");
+  		var parrafo = document.createTextNode("Telefono "+i+" ");
+  		var libre = document.createTextNode("  ");
+  		var but=document.createElement("button");
+  		var texbuton = document.createTextNode(" - ");
+  		var inp=document.createElement("input");
+  		texto.appendChild(parrafo);
+  		but.appendChild(texbuton);
+  		inp.id=i;
+  		inp.name='numero'+i;
+  		inp.placeholder="numero";
+  		but.setAttribute('class','eliminar');
+  		but.setAttribute('type','button');
+  		but.setAttribute('id',i);
+  		but.setAttribute('value',i);
+  		but.setAttribute('onclick','borrar(this.value)');
+  		espacio.setAttribute('id',i);
+  		texto.setAttribute('for','numero'+i);
+  		texto.setAttribute('id',i);
+  		document.body.appendChild(texto);
+  		document.body.appendChild(inp);
+  		document.body.appendChild(but);
+  		document.body.appendChild(espacio);
+  		i++;
+  	}
+  	function borrar(i){
+  		var x=0;
+  		while(x!=4)
+  			{
+  				var hijo = document.getElementById(i);
+  				var padre = hijo.parentNode;
+    			padre.removeChild(hijo);
+    			x++;
+   			}
+  	    
+  	}
+  	</script>
+  	</section>
+  </body>
+</html>

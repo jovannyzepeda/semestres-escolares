@@ -1,0 +1,4 @@
+diagrama 8,9,10 bases de datos
+servidor de correos
+texturas de blender
+ 

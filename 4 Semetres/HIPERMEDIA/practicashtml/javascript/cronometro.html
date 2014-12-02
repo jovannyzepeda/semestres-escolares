@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  	 <span id="horas">0</span>:<span id="minutos">0</span>:<span id="segundos">0</span>:<span id="mili">0</span><br>
+  	<button type="button" onclick="carga()">INICIO</button>
+  	<button type="button" onclick="parar()">PARAR</button>
+  	<button type="button" onclick="reinicio()">REINICIAR</button>
+  	<script type="text/javascript">
+  	var cronometro,ss=0,mm=0,hh=0,mmmm=0;
+   function carga()
+	    {
+	        var s = document.getElementById("segundos");
+	        var m = document.getElementById("minutos");
+	 		var h = document.getElementById("horas");
+	 		var mmm=document.getElementById("mili");
+	        cronometro = setInterval(
+	            function(){
+	            	if(mmmm==100){
+	            		ss++;
+	            		mmmm=0;
+	            		s.innerHTML = ss;
+	                if(ss==60)
+	                {
+	                    ss=0;
+	                    mm++;
+	                    m.innerHTML = mm;
+	 
+	                    if(mm==60)
+	                    {
+                       mm=0;
+                       hh++;
+                       h.innerHTML=hh;
+	                    }
+	                }
+	 				
+	 				}
+	                mmm.innerHTML = mmmm;
+	                mmmm++;
+	 
+	            }
+	            ,10);
+	 
+	    }
+	    function reinicio(){
+	    	ss =0;
+	        mm =0;
+	        hh=0
+	        mmmm=0;
+	        h.innerHTML=hh;
+	        m
+	    }
+	    function parar(){
+	    	clearInterval(cronometro);
+	    }
+  	</script>
+
+  </body>
+</html>

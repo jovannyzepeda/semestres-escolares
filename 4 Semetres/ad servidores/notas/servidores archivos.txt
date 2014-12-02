@@ -1,0 +1,189 @@
+Un servidor de archivos es un tipo de servidor que almacena y distribuye diferentes tipos de archivos entre los clientes de una red de ordenadores. Su función es permitir a otros nodos 
+el acceso remoto a los archivos que almacena o sobre los que tiene acceso.
+NFS
+
+    Tiene fama de rápido.
+    En las pruebas ha dado un pésimo resultado.
+    Sirve tanto a través de internet como LAN.
+    Su configuración, con autenticación no es trivial.
+    A partir de Windows 8 sólo se soporta este protocolo en la versión enterprise y los clientes no nativos como Nekodrive tampoco soportan Windows 8.
+    Tiene una gran estabilidad superior a SMB para ficheros grandes.
+SMB
+    Este protocolo tiene la desventaja de servir solamente para redes LAN.
+    Su configuración es trivial.
+    FTP
+        FTP Simple
+            Queda descartado como sistema de transferencia de ficheros, ya que para LAN existen soluciones mejores y para internet FTP es un protocolo inseguro, pese a su extendido uso.
+            Sin embargo es el que mejor rendimiento y velocidad nos puede ofrecer si nuestro servidor tiene pocos recursos ya que no deberá cifrar y descifrar la conexión
+        SFTP
+            Todo servidor debe tener una shell ssh para poder conectarse remotamente, por lo que esta opción
+                Es un protocolo seguro.
+                Nos evita tener otro demonio corriendo.
+                Nos evita gestionar usuarios de forma separada.
+                Al tener instalado openSSH en nuestro servidor no necesitaríamos configurar nada más.
+                Utiliza un solo canal de comunicación, por lo que las conexiones a través de un firewall son más fáciles. (Aquellos que hayan configurado un FTP en AZURE sobre una máquina virtual Linux sabrán de que hablo :D).
+        FTPS
+            Es un protocolo seguro.
+            Requiere de conocimientos mínimos para su configuración.
+            Requiere instalar un servicio.
+
+crear carpeta en home 
+scrips de bash o shell 
+
+ 
+
+
+nfs***************************************************
+Si deseamos instalar la última versión disponible, podemos hacerlo con apt-get desde una consola de root:
+
+    // Instalación de NFS
+    # apt-get install nfs-common nfs-kernel-server
+
+
+Configuración del servidor NFS
+Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. 
+También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo /etc/exports
+
+    // Archivo de configuración del servidor NFS
+    /etc/exports
+
+En cada línea del archivo de configuración del servidor NFS /etc/exports, se puede especificar:
+
+    La carpeta que se quiere compartir
+    El modo en que se comparte (solo lectura 'ro' o lectura y escritura 'rw' )
+    Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)
+
+A continuación mostramos un sencillo archivo /etc/exports para configurar algunas carpetas compartidas
+
+    // Ejemplo de archivo /etc/exports de configuración del servidor NFS:
+
+    # Compartir la carpeta home del servidor
+    # en modo lectura y escritura y accesible desde la red 192.168.0.0/24
+    /home 192.168.0.0/255.255.255.0(rw)
+
+    # Compartir carpeta tmp a todos como 'solo-lectura'
+    /tmp *(ro)
+
+    # Compartir carpeta /var/log a un PC como 'solo-lectura'
+    /var/log 192.168.0.211(ro)
+
+
+Cuando se comparte por NFS, se recomienda restringir al máximo los permisos. Si los usuarios no tienen la necesidad de escribir, debemos compartir con permiso de 'solo lectura'.
+ Si los usuarios solo se conectan desde nuestra red 192.168.0.0/24, debemos permitir el acceso solo desde dicha red. 
+
+ftp ********************************************
+
+nstalación de proftpd
+Proftpd se puede instalar automáticamente mediante apt-get:
+
+    // Instalación de proftpd
+    sudo apt-get install proftpd-basic 
+
+
+Configuración de proftpd
+
+Al instalar el paquete proftpd-ldap se iniciará el asistente de configuración de proftpd. Si más adelante deseamos lanzar de nuevo el asistente, debemos ejecutar:
+
+// Lanzar el asistente de configuración de proftpd
+sudo dpkg-reconfigure proftpd-basic
+
+Este asistente únicamente nos hace una pregunta que es si deseamos ejecutar el servidor desde inetd (solo se carga en memoria cuando existan peticiones) o como un servicio independiente (permanentemente en memoria). El funcionamiento como servicio independiente es más eficiente.
+
+[Asistente de configuración de Proftpd]
+
+Asistente de configuración de Proftpd
+
+El archivo de configuración de proftpd es el archivo:
+
+    // Archivo de configuración de proftpd
+    /etc/proftpd/proftpd.conf
+
+El único parámetro del archivo /etc/proftpd/proftpd.conf que vamos a modificar es el parámetro DefaultRoot para que los usuarios entren directamente a su carpeta home:
+
+    // Para que los usuarios entren directamente a su home, editar /etc/proftpd/proftpd.conf y añadir
+    DefaultRoot ~ 
+
+Después, con solo arrancar el servidor ftp, debería funcionar.
+
+    // Arranque del servidor ftp
+    sudo /etc/init.d/proftpd restart 
+
+Para que proftpd arranque automáticamente al iniciar el servidor, debemos crear los enlaces simbólicos correspondientes tal y como se indica en el apartado Trucos > Arranque automático de servicios al iniciar el sistema.
+
+Práctica - Probar el servidor ftp
+
+Para probar que está funcionando el servidor ftp intentaremos entrar con el usuario profesor y una vez dentro descargaremos un archivo desde el servidor ftp a nuestro PC: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+smb***********************************************
+
+
+El servidor samba es una colección de utilidades que nos permiten compartir ficheros e impresoras con clientes y servidores windows desde nuestro entorno tipo unix de forma casi transparente. De esta manera no tendremos que ponernos en la penosa tarea de estar realizando conexiones ftp o sftp para intercambiar archivos entre las diferentes plataformas.
+
+Instalación:
+
+Para lograr nuestro cometido primero que nada debemos tener los siguientes paquetes instalados: samba, smbclient, winbind, krb5-doc, krb5-user, y krb5-config para ello ejecutamos lo siguiente en una consola como usuario root:
+
+aptitude update
+aptitude dist-upgrade
+aptitude install samba smbclient winbind krb5-doc krb5-user krb5-config
+
+el update y el dist-upgrade es para asegurarnos de tener el sistema actualizado al día de hoy, lo que es muy importante ya que constantemente hay correcciones de bugs y parches de seguridad para mantener nuestro debian seguro y lo mas estable posible. Por último, al haber realizado las dos operaciones anteriores, la orden install del aptitude nos instalará las últimas versiones estables y seguras de samba y sus utilidades.
+
+Configuración del entorno:
+
+Ahora debemos crear el usuario que podrá compartir archivos en la red windows, nuevamente como usuario root digitamos en una consola:
+
+adduser enenias
+passwd enenias
+smbpasswd -a enenias
+mkdir /home/enenias/samba
+chown enenias /home/enenias/samba
+
+la orden adduser crea un usuario llamado enenias en nuestro sistema, la orden passwd enenias le asigna una contraseña de acceso al sistema a dicho usuario, smbpasswd le asignará una contraseña para acceder a la red de samba , mkdir creará la carpeta que queremos compartir y por último chown cambiará el propietario de ésta carpeta al usuario enenias.
+
+
+Editando archivo de configuración del samba
+
+Ahora debemos editar con tu editor de texto favorito el archivo de configuración ubicado en /etc/samba/smb.conf
+
+vim /etc/samba/smb.conf
+
+y configuramos a nuestra conveniencia:
+
+[global]
+
+workgroup = grupodetrabajo
+dns proxy = no
+log file = /var/log/samba/log.%m
+syslog = 0
+
+workgroup: en esta opción ponemos el nombre del grupo de trabajo de la red windows. dns proxy: es para evitar que el nmbd busque nombres netbios a través del dns. log file: para que se cree un log independiente por cada usuario samba que tengamos. syslog: con la opción cero sirve para que los logs del samba sólo los administre samba.
+
+
+Ejecutando el servidor samba
+
+Por último debemos reiniciar el servidor samba, ya que al instalarlo éste comenzó su ejecución pero con la configuración por defecto y para que trabaje con la que acabamos de efectuar necesitamos ejecutar lo siguiente en consola como root nuevamente:
+
+cd /etc/init.d/
+./samba restart
+
+con el primer comando nos ubicamos en el directorio donde se encuentra el script de ejecución del samba, y con el segundo reiniciamos el servidor.
+
+    Nota, la carpeta que se creo se debe configurar en el archivo smb.conf para que esté compartida, adicionalmente el usuario que creamos debemos configurarlo para que sea el que tenga permisos de entrar a esa carprta y realizar cambios.
+
+path=/home/enenias/samba browseable=yes writeable=yes valid users = enenias admin users = root

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1411670065 source:/home/zepeda/Documentos/escuela/ isw/actividades/c++/p3isw14bAzepedajovanny/main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<fstream>
+
+1411670065 source:/home/zepeda/Documentos/escuela/seminario de bases de datos/actividades/c++/p3sbda14bzepedajovanny/main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<fstream>
+

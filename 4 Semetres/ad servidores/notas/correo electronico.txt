@@ -1,0 +1,77 @@
+aopara el servidor de correo el dns debera de tener un mx y despues un A ejemplo
+capuleto.org MX 10 correo.capuleto.org.
+correo.capuleto.org. A 173.6.5.4
+
+al crear un servidor de correo poner un nombre para los usuarios normales y un nombre para los usuarios virtuales
+no debe de ser alias del dominio real
+
+lo importante al realizarlo es que los usuarios reales se queden con el domino de la maquina y los otros se puedan configurar alias de un usuario a otro usuario 
+
+
+debemos de evitar que nos envien correos a traves de nuestro servidor 
+
+ejemplo de ello es que un usario no registrado es decir que no se autentica no puede enviar correos pero si este se logra autenticar si puede enviar todos los correo que se desen
+
+el puerto del smtp siempre sera el 25 ya que todos los servidores del mundo esperan el puerto 25
+
+netcat es para ver un puerto en la red
+
+nc -l -p80
+
+-l es a la escucha -p es el puerto a la escucha (aqio se escucha el 80)
+
+otra froma de ponerse es
+
+nc 
+
+el correo perfecto seria escribir la cabecera de correo mail from en el from que esta en data
+
+SPF sirve para ver registros de DNS y hace que se eviten enviar correos por alguien adicional
+ejemplo de este es 
++a:raspgat.gatuno.mx -all
+
+
+
+intentar hacer el mail from autenticandose y enviarlo a otro (leer el comando AUHT PLAIN          AUTH LOGIN)
+
+PARA ELLO PREGUNTAR LOS MX Y DESPUES USAR EL NC 
+
+usuarios reales y permitir que todo el correo de los usuarios reales se rediriga al correo de mi usuario
+usuarios virtuales y dominios virtuales con alias 
+los dominios virtuales no deben de ser los mimos del real de lo contrario se confundirian lo susuarios reales de los virtuales
+
+un servidor de correo es exim (exim es un router y transportes)
+el otro servidor de correos es postfix, 
+evitar utilizar qmail
+
+el servidor de preferencia debe de contemplar una peque;a abertura en el correo 
+para la otra parte se recomienda el imap q todavia no se usa  se recomienda utilizar curierimap , tambien existe el davecot
+
+
+los ficheros de configuracion son /var/mail
+
+para crear los usuarios virtuales se pueden guardar en /var/mail
+cuando se tenga que entregar el correo a un usuario real debe de ser en la personal , por este caso solo sera en /var/mail
+
+otro importante es el tipo a como guardar los correos que existen mbox (crea todo en un solo archivo) y maildir (recomendacion usar maildir el cual contiene tres carpetas una que se llama tmp
+new y cur la forma en la cual funciona es primero escribirlos en tmp, cuando este listo se pasa a new y cuando los lee el cliente pasa a cur)
+tambien poner cuotas que son limites de tama;o de correo ejemplo 300 mb
+para darle orden a /var/mail se puede hacer lo siguiente ejemplo
+/var/mail/www-data    y asi sucesivamente para usuarios reales y para usuarios virtuales seria
+/var/mail/corb.mx   donde la carpeta representa el dominio virtual que es exactamente igual a dominioy dentro de ella ir creando las carpetas de los usarios virtuales
+ejemplo 
+/var/mail/corb.mx/zepeda
+
+
+
+
+soportara dominios virtuales, redirecciones de usuarios, usuarios virtuales ,alias de dominios ademas contemplar 
+
+la recomendacion es realizar una base de datos con los dominios y los usuarios virtuales
+
+
+
+
+-------------------
+
+rgb2gray.com alterar el mx 

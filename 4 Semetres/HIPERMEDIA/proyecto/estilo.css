@@ -1,0 +1,186 @@
+header,.informacion{
+	border-style: dotted;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+input{
+	border-color: green;
+	border-style: groove;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.mini{
+
+	font-size: .5rem;
+}
+header{
+	background-color: #2E2E2E;
+	height: 10%;
+	position: fixed;
+	width: 79%;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+	margin-left: 10%;
+} 
+nav{height: 100%;width: 100%;}
+li {
+	float : left;
+	margin-right : 5%;
+	text-align : center;
+	font-size: 1.8rem;
+	height: 100;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+a{
+	color: white;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.imagen{
+	width: 100%;
+	height: 12%;
+	background-color: #610B21;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.nosotros,.video,.promo,.especial{
+	height: 25%;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+
+}
+.nosotros{
+	font-size: 1rem;
+	float: left;
+	width: 45%;
+	background-color: white;
+	margin-left: 10%;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.informacion{
+	background-color: #0B4C5F;
+	height: 160%;  
+	border-style: dotted;
+	margin-top: 3%;
+	position: static;
+	width: 80%;
+	transition: all 4s ease;
+	margin-left: 10%;
+	-moz-transition: all 4s ease;
+
+}
+.video{
+	float: left;
+	width: 30%;
+	color: white;
+	background-color: black;	
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.promo{
+	margin-top: 2%;
+	float: left;
+	width: 30%;
+	background-color:  pink;
+	margin-left: 20%;
+	clear: left;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.especial{
+	margin-top: 2%;
+	float: right;
+	width: 30%;
+	background-color:  violet;
+	margin-right: 20%;
+	clear: right;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.contacto{
+	margin-top: 2%;
+	float: left;
+	width: 20%;
+	height: 30%;
+	background-color:  pink;
+	margin-left: 5%;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.ubicacion{
+	margin-top: 2%;
+	float: right;
+	width: 35%;
+	height: 32%;
+	background-color:  pink;
+	margin-right: 5%;
+	text-align: center;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.direccion{
+	color: pink;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 1%;
+	font-size: 100%;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+footer{
+	height: 13%;
+	background: pink;
+	width: 80%;
+	margin-left: 10%;
+	font-size: 2rem;
+	border-radius: 2rem;
+	text-align: center;
+	border-style: dashed;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.center{
+	font-size: 2rem;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+
+}
+form{
+	margin-left: 15%;
+	font-size: 2rem;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+
+}
+input{
+	font-size: 1.1rem;
+	color: blue;
+	background-color: pink;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+textarea{
+	font-size: 1.1rem;
+	color: blue;
+	background-color: pink;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+
+}
+button{
+	background-color: pink;
+	font-size: 1.1em;
+	color: blue;
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}
+.imagen2{
+	width: 100%;
+	height: 20%;
+	
+	background-image: url(imagenes/rosas.jpg);
+	transition: all 4s ease;
+	-moz-transition: all 4s ease;
+}

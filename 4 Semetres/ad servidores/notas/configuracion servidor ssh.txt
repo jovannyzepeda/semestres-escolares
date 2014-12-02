@@ -1,0 +1,28 @@
+ 
+/etc/ssh/ssh_config: Archivo de configuración del cliente ssh
+/etc/ssh/sshd_config: Archivo de configuración del servidor ssh
+
+
+// Iniciar o Reiniciar el servidor ssh
+sudo /etc/init.d/ssh restart 
+
+
+// Parar el servidor ssh
+sudo /etc/init.d/ssh stop 
+
+
+ssh direccion ip para conectar a servidor ssh
+ejemplo ssh @root 172.22.200.6
+realizar analisis de puertos
+
+puerto a eleccion 4000
+
+
+como saber que puertso estan en eschucha 
+netstar -ntl
++l   -> puertos a la escucha
++n   -> numerico sin resolucion inverso
++t    solo conexiones tcp
++u    solo conexiones udp
++p programa que abrio el socket 
+

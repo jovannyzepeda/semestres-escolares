@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Mi perfil</title>
+<style type="text/css">
+<!--
+.estilo1 {
+	font-weight: bold;
+	text-align: center;
+}
+.Estilo3 {
+	text-align: left;
+}
+.Estilo2 {
+	font-size: 18em;
+	text-align: left;
+}
+body {
+	background-color: #FFFFCC;
+}
+-->
+</style>
+</head>
+
+<body>
+<div >
+  <table width="100%" border="10%" class="estilo1">
+    <tr>
+     <td><div><h1>Mi perfil</h1> </div></td>
+    </tr>
+  </table>
+  <table width="100%" border="10%" height="40%">
+    <tr>
+      <td width="20%" height="40%"><div class="Estilo3">
+	<nav>        
+	<ul>
+        <li><a href="uno.html">Datos personales</a></li>
+        <li><a href="dos.html">Horario Escolar</a></li>
+        <li><a href="tres.html">Pasatiempos</a></li>
+        <p></p>
+	</ul>
+	</nav>
+      </div></td>
+      <td width="80%" class="Estilo2"><div>
+	
+	<ul>
+	<table width="80%" border="5%">
+      <tr>
+        <td width="50%"><ul>
+          <li>Nombre completo: Jovanny Israel Zepeda Roque.</li>
+          </p>
+          <p>        
+          <li>Centro Universitario: CUCEI</li>
+          </p>
+          <p>        
+          <li>Semestre actual: 4*</li>
+          </p>
+          <p>        
+          <li>Fecha de nacimiento: 1 -Septiembre - 1993</li>
+        </ul>        </td>
+        <td width="30%"><img src="/home/zepeda/Escritorio/documentos compartidos/yo.jpg" width="65%" height="13%"></td>
+      </tr>
+	  </li>
+    </table>
+	<p></p>
+	</ul>
+	
+        </div></td>
+    </tr>
+  </table>
+  <table width="100%" border="10%" class="estilo1">
+    <tr>
+      <td><div><h1>HECHO EN MEXICO XP</h1> </div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

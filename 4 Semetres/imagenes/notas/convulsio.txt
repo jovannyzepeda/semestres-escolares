@@ -1,0 +1,28 @@
+la convulsion consiste en el hecho de realizar la multiplicacion de dos valores de se;ales en los resiltados de una imagen 
+ejemplo de esto es lo siguiente:
+
+1   2   3  .   4   5  6 
+
+donde el pubto de en medio significa donde inicia una se;al hacia la derecha y hacia la derecha del punto es la misma se;al pero con los los resultados hacia la izquierda como si fuese una 
+tortilla doblada posteriormente la fomula menciona que cuando se avanza hacia la derecha se debe ir multiplicando por el valor que existe 
+
+
+ 
+Parte del teorema del limite central
+
+*******
+para poder resolver el problema del ruido es necesario utilizar el promedio o media para poder alinear los resultados a la realidad en lo mas posible 
+
+la construccion de la se;al es simple unicamente se toman muestras del pasado y del futuro para saber cual seria el dato correcto y repetir esto para cada dato 
+ejemplo de funcion seria esto ;
+
+
+y[i]=    x[i-1]+x[i]+x[i+1]
+              ---------------------------
+                              3
+
+
+esto tambien llega a suavisar los bordes de una imagen al mens que se realice algo paar evitar esto ya sea con un condicional o al go por el estilo , a su vez 
+
+
+para el kernel usar le filtro de sobel que normalmente encuentra bordes

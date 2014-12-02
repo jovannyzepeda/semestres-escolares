@@ -1,0 +1,31 @@
+ 
+  	<script type="text/javascript">
+  	for(x=0;x<11 ;x++){
+  		 	document.write(x+"<br>");
+  		 console.log(x);
+  		 	}
+  	</script>
+
+
+las formas de llamar a un documento es por getElementById 
+o ben es posible llamarlo 
+document.formulario.n1.value;
+donde formulario es donde se encuentra el elemento (u formulario en este caso) y n1 es el id de ese elemento
+inertHTML sirve para realizar un muestreo de lo que existe en el javascreiot con el texto y para mostrar seria
+document.tiempo.innerHTML(h+':'+m':'+s);
+
+
+documentacion oficila de javascript es 
+
+
+json
+coldbacks hacer ejercicios para entenderlos
+
+
+function some_function(arg1,arg2,callback){
+var my_number= Math.ceil(Math.random() * (arg1+arg2))
+
+}
+callback es tambien como crea una funcion dentro de otra some_function (5,15, function(num){
+console.log("callbacj called " + num);
+});

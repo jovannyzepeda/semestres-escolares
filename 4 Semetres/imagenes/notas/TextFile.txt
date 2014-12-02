@@ -1,0 +1,23 @@
+ 
+regla para obtener bordes en matlab seria aplicar la funcion de la derivada 
+(I(i+h , j)-I(i,j))h  -->  dI/di
+
+(I(i, j+h)-I(i , j) ) / h     -- >  dI/dj   lim h->0
+
+
+
+entradas  I  (escala de grises)
+
+salidas DIi     dIj      y gradI
+
+for i=1:m  
+	for j=1:n
+		d I j ( i , j )= I ( i , j + 1 ) - I ( i , j );
+		 d I i ( i , j ) = I ( i + 1 , j )  - I ( i , j );
+		gradI ( i , j ) = ( d I j (  i ,  j) ^ 2 +  d I i ( i , j ) ^ 2 ) ^ 0 . 5
+		end
+	end
+end
+
+
+buscar sobre imshow paera resolver esto 

@@ -1,0 +1,26 @@
+para crear formularios usar la etiqueta
+<form>
+/*los datos internos son input(campo vacio a escribir) select(lista desplegable) botton(boton) text area(area para escribir)*/
+<form method="Get" action="otro.php">/*permite enviar informacion a otro lugar lo de get y actio/*
+<input type="text" name="nombre"/>      //////area de texto para escribir lo que sea 
+<select name="carrera">
+			<option>INNI</option>
+			<option>INCO</option>
+		</select>    crea un menu desplegable 
+	<button type="submit">Enviar</button>    /// crea un boton para realizar cualquier funcion 
+
+</form> 
+
+
+
+
+tarea leer los metodos para php (post get update delete)
+post sirve para metod que es la forma en que se envian los datos este hace que se envien los datos de manera oculta mientras que get envia los datos 
+atraves de la direccion url separandolos por un signo de interrogacion
+update actualiza las entidades u objetos
+delete desabilita entidades existentes
+
+<input type="text" id="cp" pattern="[d]{5}"
+ required="required"   ---> obliga a poner un campo en el lugar
+ placeholder="Ejemplo: 45450"    -----> pone un texto de ejemplo que se borra al escribir
+/> 

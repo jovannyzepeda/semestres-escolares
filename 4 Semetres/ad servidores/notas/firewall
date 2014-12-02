@@ -1,0 +1,56 @@
+firewall.iptables 
+accept
+reject
+drop cierra todas las entradas 
+
+forma de crear una tabla
+INPUT POLITICA: DROP  es la politica por defecto si no entra en esta en especifico son rechazadas
+source:                                      Dst:                          proto:                                policy:
+0.0.0.0                                   0.0.0.0                         TCP 25                               ACCEPT
+por donde                       por donde
+entra                                         sale
+
+8.8.8.8/32                             0.0.0.0                        UDP 53                              ACCEPT
+148.201.0.0/16                  0.0.0.0                        ALL                                      ACCEPT
+148.202.153.110/32       0.0.0.0                        TCP new                            DROP
+148.202.0.0/16                 172.22.200.1           TCP 22                                ACCEPT
+
+esta es la tabla de entrada
+
+
+Todas las reglas deben de estar ordenadas ya que si una hace accept se detiene el proceso por lo que que si el orden de las dos 148 estuviese al reves no se rechazaria el paquete
+
+
+
+la tabla de salida es output accept es decir todo es aceptado.
+
+
+para crear nuevas conexiones se puede utilizar el tcp new esto permite si se usa la tabla anterior que no se permitan realizar conexiones de alan turing hacia ti pero tu si puedas conectarte
+con alan turi y entablar conexiones.
+
+
+
+es bueno leer fail2ban permite que despues de ciertos intentos se bloquea el servicio para esa ip durante cierto tiempo l1293
+
+
+
+la practica seria usando ip tables
+
+
+otro tipo de tabla especial son las de 
+
+
+leer sobre todo esoS
+
+buscar sobre /etc/rc.local
+
+
+
+
+bloquear todo el trafico que viene de 172.22.200.6
+menos por el puerto 80
+cambiar el servidor ssh al puerto 22
+deben de poder conectarese al ssh de 172.22.200.6
+
+antes de empezar primero hacer aceptar a mi red y despues drop a los otrso 
+

@@ -1,0 +1,25 @@
+Connection con = null;
+try {
+//definir libreria del  motor que usaremos, MySQL
+Class.forName("com.mysql.jdbc.Driver");
+//creaqr conexion con direccion , usuario, controasena
+con = DriverManager.getConnection("jdbc:mysql://localhost/alipus","root", "cruel1293");
+if (con != null) {
+//creamos un objeto Statement , con el podremos enviar al servidor sql  consultas
+Statement st = con.createStatement();
+System.out.println("conectado a base de datos alipus");
+//funcion variable
+st.executeQuery(funcion);
+//fin de funcion variable
+con.close();
+}
+} catch (ClassNotFoundException ex) {
+        Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
+    }
+comando El método executeQuery() es solo para SELECT. Si quieres INSERT, UPDATE o DELETE tienes que usar el método execute().
+
+
+
+///netbeasn
+pasar textbox a cadena
+String number = txtSub.getText();    

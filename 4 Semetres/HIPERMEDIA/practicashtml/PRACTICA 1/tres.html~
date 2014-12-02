@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Mi perfil</title>
+<style type="text/css">
+<!--
+.estilo1 {
+	font-weight: bold;
+	text-align: center;
+}
+.Estilo3 {
+	text-align: left;
+}
+.Estilo2 {
+	font-size: 18px;
+	text-align: left;
+}
+body {
+	background-color: #FFFFCC;
+}
+-->
+</style>
+</head>
+
+<body>
+<div >
+  <table width="100%" border="10%"  class="estilo1">
+    <tr>
+      <td><div><h1>Mi perfil</h1> </div></td>
+    </tr>
+  </table>
+  <table width="100%"height="40%"  border="10%">
+    <tr>
+      <td width="20%"><div class="Estilo3">
+	<nav>        
+	<ul>
+        <li><a href="uno.html">Datos personales</a></li>
+        <li><a href="dos.html">Horario Escolar</a></li>
+        <li><a href="tres.html">Pasatiempos</a></li>
+        <p></p>
+	</ul>
+	</nav>
+      </div></td>
+      <td width="80%"><div>
+	<ul>
+	<p><li>Realizar deportes Aerobicos.</li></p>
+	<p><li>Jugar videojuegos.</li></p>
+	<p><li>Programar.</li></p>
+        <p></p>
+	</ul>
+        </div></td>
+    </tr>
+  </table>
+  <table width="100%" border="10%" class="estilo1">
+    <tr>
+      <td><div><h1>HECHO EN MEXICO XP</h1> </div></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

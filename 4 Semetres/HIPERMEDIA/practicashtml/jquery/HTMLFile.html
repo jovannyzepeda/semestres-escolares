@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script>
+<!-- after crea texto despues de lo que se selcciona en este caso parrafos "p"
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").after("<p>Hello world!</p>");
+  });
+});
+///////////////cambiar de clase al seleccionar botones
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p:first").addClass("intro");
+  });
+});
+
+////////apend agrea un apendice despues de cada seccion con atributo seleccionado
+$("button").click(function(){
+  $("p").append("<b>fin</b>");
+});///en este caso despues de cada parrafo se agrega el texto fin
+
+///esta es similar a la otra solo que agraga una etiqueta span
+$(document).ready(function(){
+  $("button").click(function(){
+    $("<span>Hello World!</span>").appendTo("p");
+  });
+});
+
+////esta funcion permite aumentar el tamano de una imagne acorde  a lo establecido en este caso de lo ancho toma un total de 500
+$(document).ready(function(){
+  $("button").click(function(){
+    $("img").attr("width","500");
+  });
+});
+
+////clona todos lo selementos que coresponde a la etiqueta seleccionada al lugar donde se seleccione auqi los parrafos se clonan al body
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").clone().appendTo("body");
+  });
+});
+
+///esta funcion cambia el css a aquello seleccionado ingresa un color de letra roja a los parrafos
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").css("color","red");
+  });
+});
+
+////
+
+
+-->
+</script>
+<style>
+.intro
+{
+font-size:150%;
+color:red;
+}
+</style>
+<button>Insert content after each p element</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+  </body>
+</html>

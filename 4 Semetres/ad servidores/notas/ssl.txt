@@ -1,0 +1,24 @@
+tracerout puede encontrar la ruta que un paquete ha tomado para llegar hasta cierto lugar 
+tracerout arma un paquete especial con unn tiempo de vida de uno es decir que solo puede brincar una vez 
+
+
+openssl genera certificados autofirmados 
+
+
+
+diffe helman
+
+
+
+servidores q se le pueden poner es el apache 
+es ssl parea web se usa el puerto 443
+
+y el smtp o servidor de correp el normal es el 25 ,  465 , 587
+
+
+ pop 110 normal y de ssl 995 
+imap 143 normal de ssl 993
+
+
+
+estos deben de tener ssl 

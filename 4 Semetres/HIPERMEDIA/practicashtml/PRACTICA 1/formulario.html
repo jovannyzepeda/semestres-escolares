@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+				<title>Jovanny bio</title>
+				<link rel="stylesheet" type="text/css" href="estilo.css">
+		</head>
+			<body>
+				<header>
+					<h1>Pasteleria Buitres de CUCEI</h1>
+				</header>
+				<aside >
+					<nav>
+						<ul>
+							<li><a href="real.html">Biografia</a></li>
+							<li><a href="real.html#gustos">Mis Gustos</a></li>
+							<li><a href="real.html#horario">Horario</a></li>
+              				<li><a href="videos.html">Video</a></li>
+              				<li><a href="formulario.html">Comentarios</a></li>
+              				<li><a href="login.html">Salir</a></li>
+						</ul>
+					</nav>
+				</aside>
+		<section class="dos">
+    	<form method="get" action="otro.php">
+			<label for="nombre">Nombre: </label>
+			<br>
+		<input type="text" id="nombre" required="required" name="nombre"/>
+		<br>
+		<label for"bday">Fecha de demostracion</label>
+		<br>
+		<input type="date" id="bday" required="required" name="fecha">
+		<br>
+		<label for="mail">Correo: </label>
+		<br>
+		<input type="email" required="required" placeholder="correo@hotmail.com" id="mail" name="correo"/>
+		<br>
+		<label for="comentarios">Comentarios: </label>
+		<br>
+		<textarea rows="4" id="comentarios" placeholder="esta pagina me gusto mucho sigan asi" name="comentarios"></textarea>
+		<br>
+		<label for="opciones">Como se entero de nuestra pagina: </label>
+		<select name="opcion" id="opciones">
+			<option value="0" selected="">Red social</option>//value es para poner un valor por defecto en esa cosa 
+			<option value="0">Turisteando</option>
+			<option value="0">Recomendacion</option>
+			<option value="0">television</option>
+			<br>
+		</select>
+		<br><br>
+		<label>Version para la que se realizara la aplicacion</label>
+		<br>
+		<label for="android">android</label>
+		<input type="checkbox" id="android" name"android" value="android" checked="on" />
+		<label for="iphone">ios</label>
+		<input type="checkbox" id="iphone" name"iphone" value="iphone" />
+		<label for="windows">windows</label>
+		<input type="checkbox" id="windows" name"windows" value="windows" />
+		<label for="linux">linux</label>
+		<input type="checkbox" id="linux" name"linux" value="linux" />
+
+			<br>
+
+
+	    <button type="submit" class="boton">Enviar</button>
+		</form>
+		</section>
+<footer><h1>Hecho en CUCEI</h1></footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+al tomar guide puedo realizar varias cosas 
+se muestra una matriz y al elegir una figura la arrastramos  
+
+
+
+existe una herramienta mejor que imshow llamada imtool(imagen ) que permite ver los valores de intensidad de cada pixel e la imagen 
+
+750< 90  
+750 - 1300 -- 169
+
+
+s=uint8(s);   trnasforma la imagen  de 1 y ceros a una real 
+
+agregacion de datos es igual a c++ if(dato&&dato)  end

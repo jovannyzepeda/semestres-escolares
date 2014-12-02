@@ -1,0 +1,44 @@
+* Crear funcion en matlab - edit Histograma -
+
+% Funcion que calcula el histograma de una imagen
+% entradas : I=imagen a la cual se calculara el histograma
+% salidas : Histogramas = Vector que contiene el histograma
+% Jovanny Israel Zepeda Roque
+% ultima fecha de actualizacion dia-mes-a;o
+
+function [Histograma]= CalculaHistograma(I);
+%Crear vector para guardar el histograma (matlab los arreglos comienzan desde 1)
+Histograma=zeros(1,256);
+
+% Obtener tamano de imagen
+[m,n]=size(I);
+
+%recorrer la imagen 
+for i=1:m
+	for j=1:n
+		Valorpixel=I(i,j);
+		Histograma(Valorpixel)=Histograma(ValorPixel)+1;
+	end
+end
+
+
+
+
+
+
+% Extra Desplegar la coordenada y el valor de cada pixel
+ 		disp(I(i,j));
+
+% medir tiempo tic - funcion -toc ;
+
+%mostrar diagrama de barras --- bar(..variable..);
+
+% abrir una figura e insertar un objeto figure nombre     bar(.variable.,R)
+
+%hold on  image 1 bar(HR,'r') bar(HB, 'b') bar(HG 'g') hold off 
+
+% : : 1 rojo , : : 3 azul , : : 2 verde
+
+calcular suma sum y algo pegado
+% Color puro es igual a grafica de 255
+

@@ -1,0 +1,125 @@
+ 
+servidor http
+
+funciona por el puerto 80
+
+http es la transferencia de los datos entre dos puntos (cliente servidor)ype::
+	peticion de cliente
+{
+GET / HTTP/1.1 (enter)
+Host: tiger.corb.mx (salto de linea)
+(salto de linea)
+}
+
+servidor  respuesta {
+
+HTTP/1.0 200 OK
+date:     
+server: Apache/2.22.22(Debian)
+Content-length: 148
+Content-Type: text/html
+
+
+despues de eso es cuando ya empieza el <html >etc etc<>
+}
+(nc -p 0 -l)
+(cuando se manda una linea vacia es donde se termina la peticion del cleinte o respuesta del cliente)
+
+
+el GET se utiliza cuando se envian cosas pequenas que aparece en la barra de direccion
+por otra parte POST es para cualquier tamano la fomrma en la que se usa es 
+abc.xom/directorio/user/archivo.html? a=1&b=2
+
+POST /receptor.php HTTP/1.1
+Host:      
+Content-Length:7
+Type:    
+
+a=1&b=2
+
+
+
+en apache es recomendable mover la capeta de defecto de apache que es /var/www
+a la de /home/www/cualquir nombre de carpeta
+
+para la practica se grearan dos nombres  (la A convierte un dominio a ip)
+peanut.dominio.com sera un registro de tipo A que apuntara a nuestra ip 172.22.200.21(/home/www/peanut)
+tambien crear el dominio 
+grape.dominio.com A 172.22.200.21(carpeta en /home/www/grape)
+(que permanezcan en la zona que hemos creado)
+la carpeta peanut tendra dentro index.html que tendra dentro
+ <html>
+	<head>
+		<title>Hola mundo</title>
+	</head>
+		<body>
+		<\body>
+<\html>
+
+en la caepeta de grape tendra un archivo codigo.txt que tendra los apellidos de la persona
+
+las configuraciones de apache virtualhost (recomendado utilizar apache  prefork el paquete se llama apache -mpm-prefork)
+de preferencia desactivar directory index
+
+
+
+leer sobre el protocolo smtp
+exim  postfix   qmail
+
+
+
+
+    Cabecera: en el ejemplo las tres primeras líneas del mensaje son la cabecera. En ellas se usan unas palabras clave para definir los campos del mensaje. Estos campos ayudan a los clientes de correo a organizarlos y mostrarlos. Los más típicos son subject (asunto), from (emisor) y to (receptor). Éstos dos últimos campos no hay que confundirlos con las órdenes MAIL FROM y RCPT TO, que pertenecen al protocolo, pero no al formato del mensaje.
+    Cuerpo del mensaje: es el mensaje propiamente dicho. En el SMTP básico está compuesto únicamente por texto, y finalizado con una línea en la que el único carácter es un punto.
+
+
+
+
+
+    Cuando un cliente establece una conexión con el servidor SMTP, espera a que éste envíe un mensaje “220 Service ready” o “421 Service non available”
+
+    Se envía un HELO desde el cliente. Con ello el servidor se identifica. Esto puede usarse para comprobar si se conectó con el servidor SMTP correcto.
+
+    El cliente comienza la transacción del correo con la orden MAIL FROM. Como argumento de esta orden se puede pasar la dirección de correo al que el servidor notificará cualquier fallo en el envío del
+ correo (Por ejemplo, MAIL FROM:<fuente@host0>). Luego si el servidor comprueba que el origen es válido, el servidor responde “250 OK”.
+
+    Ya le hemos dicho al servidor que queremos mandar un correo, ahora hay que comunicarle a quien. La orden para esto es RCPT TO:<destino@host>. Se pueden mandar tantas órdenes RCPT 
+como destinatarios del correo queramos. Por cada destinatario, el servidor contestará “250 OK” o bien “550 No such user here”, si no encuentra al destinatario.
+
+    Una vez enviados todos los RCPT, el cliente envía una orden DATA para indicar que a continuación se envían los contenidos del mensaje. El servidor responde “354 Start mail input, 
+end with <CRLF>.<CRLF>” Esto indica al cliente como ha de notificar el fin del mensaje.
+
+    Ahora el cliente envía el cuerpo del mensaje, línea a línea. Una vez finalizado, se termina con un <CRLF>.<CRLF> (la última línea será un punto), a lo que el servidor contestará “250 OK”, 
+o un mensaje de error apropiado.
+
+    Tras el envío, el cliente, si no tiene que enviar más correos, con la orden QUIT corta la conexión. También puede usar la orden TURN, con lo que el cliente pasa a ser el servidor, y el servidor
+ se convierte en cliente. Finalmente, si tiene más mensajes que enviar, repite el proceso hasta completarlos.
+
+Puede que el servidor SMTP soporte las extensiones definidas en el RFC 1651, en este caso, la orden HELO puede ser sustituida por la orden EHLO, con lo que el servidor contestará con una lista 
+de las extensiones admitidas. Si el servidor no soporta las extensiones, contestará con un mensaje "500 Syntax error, command unrecognized".
+
+En el ejemplo pueden verse las órdenes básicas de SMTP:
+
+    HELO, para abrir una sesión con el servidor
+    MAIL FROM, para indicar quien envía el mensaje
+    RCPT TO, para indicar el destinatario del mensaje
+    DATA, para indicar el comienzo del mensaje, éste finalizará cuando haya una línea únicamente con un punto.
+    QUIT, para cerrar la sesión
+    RSET Aborta la transacción en curso y borra todos los registros.
+    SEND Inicia una transacción en la cual el mensaje se entrega a una terminal.
+    SOML El mensaje se entrega a un terminal o a un buzón.
+    SAML El mensaje se entrega a un terminal y a un buzón.
+    VRFY Solicita al servidor la verificación de todo un argumento.
+    EXPN Solicita al servidor la confirmación del argumento.
+    HELP Permite solicitar información sobre un comando.
+    NOOP Se emplea para reiniciar los temporizadores.
+    TURN Solicita al servidor que intercambien los papeles.
+
+De los tres dígitos del código numérico, el primero indica la categoría de la respuesta, estando definidas las siguientes categorías:
+
+    2XX, la operación solicitada mediante el comando anterior ha sido concluida con éxito
+    3XX, la orden ha sido aceptada, pero el servidor esta pendiente de que el cliente le envíe nuevos datos para terminar la operación
+    4XX, para una respuesta de error, pero se espera a que se repita la instrucción
+    5XX, para indicar una condición de error permanente, por lo que no debe repetirse la orden
+
+Una vez que el servidor recibe el mensaje finalizado con un punto puede almacenarlo si es para un destinatario que pertenece a su dominio, o bien retransmitirlo a otro servidor para que finalmente llegue a un servidor del dominio del receptor.

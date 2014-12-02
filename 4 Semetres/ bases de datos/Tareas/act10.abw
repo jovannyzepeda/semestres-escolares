@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="26" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:es-MX; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Sat Nov  1 09:00:28 2014
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">zepeda</m>
+<m key="dc.date">Sat Nov  1 09:00:28 2014
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="1" edit-time="1163" last-saved="1414854028" uid="1bde7244-61d5-11e4-9cf7-d69207254fe9">
+<version id="1" started="1414854028" uid="d10b3ff6-61d7-11e4-9cf7-d69207254fe9" auto="0" top-xid="26"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="5" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr"><c>¿Corren exitosamente estas expresiones de SQL?</c></p>
+<p style="Normal" xid="4" props="text-align:left; dom-dir:ltr"><c>las tres expresiones corren de forma adecuada lo unico que hace falta mencionar  es que despues de crear la base de datos con el comando create database es necesario usar la sentencia use y el nombre de la base de datos en este caso videos ya que de lo contrario el comando create table seria rechazado por no tener una base de datos donde este sea ejecutado.</c></p>
+<p style="Normal" xid="8" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="1" props="text-align:left; dom-dir:ltr"><c>- Si es asi, ¿Qué es lo que hacen? ¿Es esto lo que deben hacer?</c></p>
+<p style="Normal" xid="9" props="text-align:left; dom-dir:ltr"><c>la primer sentencia crea una base de datos llamada video, la segunda una tabla con el nombre vide_type con dos datos internos y el ultimo altera esta misma tabla agregando una columna mas de nombre courrent_price de tipo money.</c></p>
+<p style="Normal" xid="10" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="2" props="text-align:left; dom-dir:ltr"><c>- Si no, ¿Cuál es el problema? ¿Cómo lo arreglarías?</c></p>
+<p style="Normal" xid="11" props="text-align:left; dom-dir:ltr"><c>--- no tienen problema alguno solo recordar el comando use para que todo funcione.</c></p>
+<p style="Normal" xid="12" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="3" props="text-align:left; dom-dir:ltr"><c> ¿Hay otra mejora que puedas hacer?</c></p>
+<p style="Normal" xid="13" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="14" props="text-align:left; dom-dir:ltr"><c> no considero que exista alguna mejora que se pueda realizar ya que la los comandos SQL o son aceptados o no lo son quizas a lo mucho si llegara a ser necesario obviamente seria agregar alguna llave primaria a la tabla, pero solo en caso de ser necesario como mencione previamente.</c></p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="16" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="17" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="18" props="text-align:left; dom-dir:ltr"><c>segunda parte ***</c></p>
+<p style="Normal" xid="20" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="21" props="text-align:left; dom-dir:ltr"><c>¿Corren exitosamente estas expresiones de SQL?</c></p>
+<p style="Normal" xid="22" props="text-align:left; dom-dir:ltr"><c>	Todas las instrucciones corren correctamente el el servidor SQL </c></p>
+<p style="Normal" xid="25" props="text-align:left; dom-dir:ltr"><c></c><c>- Si es asi, ¿Qué es lo que hacen? ¿Es esto lo que deben hacer?</c></p>
+<p style="Normal" xid="26" props="text-align:left; dom-dir:ltr"><c>	Lo que realizan es crear tablas en el entorno pero con condiciones mas especificas que 	de hecho es lo correcto ya que el primer comando crea una tabla con una   llave		primaria </c></p>
+<p style="Normal" xid="23" props="text-align:left; dom-dir:ltr"><c>- Si no, ¿Cuál es el problema? ¿Cómo lo arreglarías?</c></p>
+<p style="Normal" xid="24" props="text-align:left; dom-dir:ltr"><c>- ¿Hay otra mejora que puedas hacer</c></p>
+<p style="Normal" xid="19" props="text-align:left; dom-dir:ltr"><c></c></p>
+</section>
+</abiword>

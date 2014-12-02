@@ -1,0 +1,2 @@
+para adaptador de cosas son en boostrap buscar uno que diga x-au compatible content = ie -sabe q uy mas abajo initial scale - 1 viewpoet y cosas similares
+cunando crees flotantes pon clear : bothj; en el cuadro siguiente ejemplo el pie despues del section 
